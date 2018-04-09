@@ -3,9 +3,9 @@ import Videolistitem from './video_list_item';
 class Videolist extends React.Component{
 
   render(){
-    
+
     const videoitems=this.props.videos.map((video)=>{
-      return <Videolistitem key={video.etag} video={video}/>
+      return <Videolistitem onVideoSelect={this.props.onVideoSelect} key={video.etag} video={video}/>
     });
     return(
       <ul>
